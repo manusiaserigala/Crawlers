@@ -10,7 +10,7 @@ class Scrape {
 	all() {
 		return new Promise((res, rej) => {
 			//fetch page data
-			axios.get('https://www.google.com/search?gl=us&q=' + this.query, {
+			axios.get('https://www.google.com/search?gl=id&q=' + this.query, {
 				headers: {
 					'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:34.0) Gecko/20100101 Firefox/34.0"
 				}
