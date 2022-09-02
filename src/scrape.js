@@ -13,7 +13,11 @@ class Scrape {
 			axios.get('https://www.google.com/search?gl=id&q=' + this.query, {
 				headers: {
 					'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:34.0) Gecko/20100101 Firefox/34.0"
-				}
+				},
+				proxy: {
+					host: '202.149.89.67',
+					port: 7999
+				    }
 			}).then(a => {
 				var results = [];
 
