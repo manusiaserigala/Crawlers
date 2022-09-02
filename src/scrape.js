@@ -106,7 +106,11 @@ class Scrape {
 			axios.get('https://google.com/search?tbm=isch&q=' + this.query, {
 				headers: {
 					'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-				}
+				},
+				proxy: {
+					host: '202.149.89.67',
+					port: 7999
+				    }
 			}).then(a => {
 				var $ = cheerio.load(a.data);
 
